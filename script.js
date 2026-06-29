@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.setAttribute('aria-expanded', isOpen);
     mobileMenu.setAttribute('aria-hidden', !isOpen);
 
+    // Lock body scroll when menu is open
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
     // Animate hamburger → X
     const spans = hamburger.querySelectorAll('span');
     if (isOpen) {
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
       const spans = hamburger.querySelectorAll('span');
       spans[0].style.transform = '';
       spans[1].style.opacity   = '';
@@ -195,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
      currently in the viewport.
   ================================================ */
   const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav__link');
+  const navLinks  = document.querySelectorAll('.nav__link, .nav__mobile-link');
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {

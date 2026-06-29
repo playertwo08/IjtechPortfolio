@@ -404,8 +404,14 @@ code, pre {
 .nav__hamburger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
-  padding: var(--space-2);
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 /* THEME TOGGLE */
@@ -435,7 +441,7 @@ code, pre {
 .nav__actions {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   margin-left: auto;
 }
 .nav__hamburger span {
@@ -457,7 +463,7 @@ code, pre {
   background: rgba(10, 14, 26, 0.97);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--clr-border-2);
-  padding: var(--space-6);
+  padding: 0 var(--space-6);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s var(--ease-out), padding 0.4s var(--ease-out);
@@ -480,6 +486,7 @@ code, pre {
   transition: color var(--transition);
 }
 .nav__mobile-link:hover { color: var(--clr-accent); }
+.nav__mobile-link.active { color: var(--clr-accent); }
 .nav__mobile-cta { margin-top: var(--space-4); text-align: center; }
 
 /* ================================================
@@ -1403,7 +1410,7 @@ code, pre {
   padding: var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 .form-group {
@@ -1481,7 +1488,7 @@ code, pre {
 }
 .footer__nav {
   display: flex;
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 .footer__nav a {
   font-size: 0.8rem;
@@ -1636,7 +1643,7 @@ code, pre {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: var(--space-1);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 .modal-gallery-strip img {
   flex: 0 0 auto;
@@ -1867,7 +1874,7 @@ code, pre {
 /* Stay tuned / TikTok placeholders */
 .stay-tuned-msg {
   text-align: center;
-  padding: var(--space-10) var(--space-4);
+  padding: var(--space-12) var(--space-4);
   color: var(--clr-text-2);
   font-size: 1rem;
   font-style: italic;
@@ -1965,7 +1972,7 @@ code, pre {
   }
   .modal-overlay.open .modal-window { transform: scale(1); }
   .modal-scroll { padding: 0; max-height: calc(90vh - 68px); }
-  .modal-gallery-strip { margin-bottom: var(--space-5); }
+  .modal-gallery-strip { margin-bottom: var(--space-3); }
   .modal-gallery-strip img { width: 90px; min-width: 90px; height: 56px; min-height: 56px; }
   .modal-gallery-main { border-radius: var(--radius-sm); }
   .modal-title { font-size: 1.15rem; }
@@ -1987,7 +1994,7 @@ code, pre {
   .template-card-info h4 { font-size: 0.85rem; }
   .template-card-info .template-price { font-size: 1rem; }
   .stay-tuned-msg { padding: var(--space-6) var(--space-4); font-size: 0.9rem; }
-  .tiktok-section { padding: var(--space-5) 0; }
+  .tiktok-section { padding: var(--space-6) 0; }
 
   .footer__inner { flex-direction: column; text-align: center; }
   .footer__copy { margin-right: 0; }
